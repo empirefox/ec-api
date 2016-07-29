@@ -11,6 +11,15 @@ export interface IOrderItem {
   Attrs: string; // sku快照项
   Price: number; // sku快照项
   DeliverFee: number; // sku快照项
+
+  // 评价相关
+  Eval?: string; // 内容
+  EvalAt?: number; // 评价时间，需要更新时间？
+  EvalName?: string; // 评价人昵称，如：罗**
+  RateStar?: number; // 总体评价，同时用来计算总体等级评定和单项评分显示，1-5级，好评为4,5 中评为2,3 差评为1
+  RateFit?: number; // 描述相符
+  RateServe?: number; // 服务态度
+  RateDeliver?: number; // 物流服务
 }
 
 订单
